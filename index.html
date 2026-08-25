@@ -19,6 +19,15 @@
 
 	    <link rel="stylesheet" href="assets/css/main.css" /> 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script>
+  if (window.location.search.includes('fbclid=')) {
+    const cleanUrl = new URL(window.location.href);
+    cleanUrl.searchParams.delete('fbclid');
+    window.history.replaceState({}, document.title, cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+  }
+</script>
+		
 	</head>
 	<body class="is-preload">
 
